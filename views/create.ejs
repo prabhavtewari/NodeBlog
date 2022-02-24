@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body>
+    <%- include('./partials/nav'); %>
+        <div class="container page-body ">
+            <div class="row justify-content-center">
+                <h1 class="py-3 fw-bold col-12">Add Blog</h1>
+                <form action="/blogs" method="post" class="col-lg-8 col-sm-10 d-flex flex-column my-3">
+                    <div class="form-floating mb-3">
+                        <input type="text" name="title" id="title" class="form-control" required>
+                        <label for="title">Title*</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="snippet" id="snippet" class="form-control" required>
+                        <label for="snippet">Snippet*</label>
+                    </div>
+                    <div class="form-floating mb-3 text-area-wrap">
+                        <textarea name="body" id="body" class="form-control" required></textarea>
+                        <label for="body">Content*</label>
+                    </div>
+                    <input type="submit" value="Add" class="btn btn-outline-success">
+                </form>
+            </div>
+        </div>
+        <%- include('./partials/foot'); %>
+</body>
+
+</html>
